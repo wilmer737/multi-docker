@@ -66,7 +66,7 @@ class Fib extends Component {
   handleSubmit = async event => {
     event.preventDefault();
 
-    await axios.post("/api/value", {
+    await axios.post("/api/values", {
       index: this.state.value
     });
 
@@ -85,7 +85,7 @@ class Fib extends Component {
             value={this.state.value}
             onChange={({ target }) => this.setState({ value: target.value })}
           />
-          <button>Submit</button>
+          <button>Submit!</button>
         </form>
 
         <h3>Indexes I have seen:</h3>
@@ -99,3 +99,4 @@ class Fib extends Component {
 }
 
 export default Fib;
+ 
